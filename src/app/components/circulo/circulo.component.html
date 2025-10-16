@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+    <div>
+        <img src="assets/media/circulo.png" alt="perimetro-circulo" />
+    </div>
+
+    <ion-item>
+        <ion-label position="floating"> Radio (en cm) </ion-label>
+        <ion-input type="number" placeholder="Ej:10" [(ngModel)]="radioCm">
+        </ion-input>
+    </ion-item>
+
+    <ion-button
+        expand="block"
+        (click)="calcularPerimetroCirculo()"
+        [disabled]="!radioCm || radioCm <= 0"
+    >
+        Calcular perímetro
+    </ion-button>
+
+    @if (perimetroResultado !== null) {
+    <div>
+        <ion-text color="primary">
+            <h2>
+                El perímetro es:
+                <strong> {{ perimetroResultado }} cm</strong>
+            </h2>
+        </ion-text>
+    </div>
+    }
+</ion-content>

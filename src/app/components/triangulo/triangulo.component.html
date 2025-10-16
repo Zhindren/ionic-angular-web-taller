@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+    <div>
+        <img
+            src="assets/media/triangulo.png"
+            alt="perimetro-triangulo"
+        />
+    </div>
+
+    <ion-item>
+        <ion-label position="floating"> Lado A </ion-label>
+        <ion-input type="number" placeholder="Ej:10" [(ngModel)]="ladoA">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating"> Lado B </ion-label>
+        <ion-input
+            type="number"
+            placeholder="Ej:10"
+            [(ngModel)]="ladoB"
+        ></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating"> Lado C </ion-label>
+        <ion-input
+            type="number"
+            placeholder="Ej:10"
+            [(ngModel)]="ladoC"
+        ></ion-input>
+    </ion-item>
+
+    <ion-button
+        expand="block"
+        (click)="calcularPerimetroTriangulo()"
+        [disabled]="
+            !ladoA || !ladoB || !ladoC || ladoA <= 0 || ladoB <= 0 || ladoC <= 0
+        "
+    >
+        Calcular perimetro
+    </ion-button>
+
+    @if (perimetroResultado !== null) {
+        <div>
+            <ion-text color="primary">
+                <h2>
+                    El perimetro es:
+                    <strong>{{perimetroResultado}} cm</strong>
+                </h2>
+            </ion-text>
+        </div>
+    }
+
+</ion-content>
