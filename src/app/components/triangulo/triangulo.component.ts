@@ -1,4 +1,4 @@
-import { Component, MissingTranslationStrategy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
     IonItem,
@@ -6,15 +6,14 @@ import {
     IonLabel,
     IonInput,
     IonButton,
-    IonText,
-} from '@ionic/angular/standalone';
+    IonText, IonImg } from '@ionic/angular/standalone';
 import { TrianguloEscaleno } from 'src/app/models/triangulo-escaleno';
 
 @Component({
     selector: 'app-triangulo',
     templateUrl: './triangulo.component.html',
     styleUrls: ['./triangulo.component.scss'],
-    imports: [IonContent, IonItem, IonLabel, IonInput, FormsModule, IonButton, IonText],
+    imports: [IonImg, IonContent, IonItem, IonLabel, IonInput, FormsModule, IonButton, IonText],
 })
 export class TrianguloComponent implements OnInit {
     constructor() {}

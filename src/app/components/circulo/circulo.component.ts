@@ -1,28 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {
-    IonItem,
-    IonContent,
-    IonLabel,
-    IonInput,
-    IonButton,
-    IonText,
-} from '@ionic/angular/standalone';
+import { IonItem, IonContent, IonLabel, IonInput, IonButton, IonText, IonCard, IonImg } from '@ionic/angular/standalone';
 import { Circulo } from 'src/app/models/circulo';
 
 @Component({
     selector: 'app-circulo',
     templateUrl: './circulo.component.html',
     styleUrls: ['./circulo.component.scss'],
-    imports: [
-        IonText,
-        IonInput,
-        IonLabel,
-        IonContent,
-        IonItem,
-        FormsModule,
-        IonButton,
-    ],
+    imports: [IonImg, 
+    IonText,
+    IonInput,
+    IonLabel,
+    IonContent,
+    IonItem,
+    FormsModule,
+    IonButton,
+    IonCard
+],
 })
 export class CirculoComponent implements OnInit {
     constructor() {}
