@@ -1,4 +1,3 @@
-import { ɵMetadataOverrider } from '@angular/core/testing';
 import { TrianguloEscaleno } from './triangulo-escaleno';
 
 export class TrianguloEquilatero extends TrianguloEscaleno {
